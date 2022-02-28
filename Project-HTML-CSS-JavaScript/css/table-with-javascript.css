@@ -1,0 +1,44 @@
+table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+
+        th {
+            height: 27px;
+            width: 77px;
+        }
+
+        td {
+            height: 27px;
+            width: 77px;
+        }
+
+        #table {
+            margin-top: 40px;
+        }
+
+        #tr2 {
+            height: 27px;
+
+        }
+
+        #tr3 {
+            height: 27px;
+
+        }
+
+        #tr4 {
+            height: 27px;
+        }
+
+        #tr5 {
+            height: 27px;
+        }
+
+        #tr6 {
+            height: 27px;
+
+        }

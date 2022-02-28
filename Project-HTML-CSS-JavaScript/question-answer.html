@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-answer</title>
+    <link rel="stylesheet" href="css/question-answer.css">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <button id="btn1" onclick="addQuestion()">Add Question</button>
+        <div id="table">
+            <div id="opt1">
+                <label for="question" id="q1">Question</label>
+                <br />
+                <textarea id="question"></textarea>
+            </div>
+            <br />
+            <div id="opt2">
+                <label for="answer" id="q2">Answer</label>
+                <br />
+                <textarea id="answer"></textarea>
+                <br /><br />
+            </div>
+            <button id="btn2" onclick="Save()">Save</button>
+        </div>
+        <div class="tables">
+            <div class="first-table" data-id="0">
+                <div class="content" data-id="0">
+                    <p class="titleQuestion" data-id="0">Q1</p>
+                    <p class="titleAnswer" data-id="0" style="display: none;">A1</p>
+                    <button class="show-hide" data-id="0">Show/Hide Answer</button>
+                    <div class="edit-delete" data-id="0">
+                        <button class="btn-edit" data-id="0">EDIT</button>
+                        <button class="btnDelete" data-id="0">DELETE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="first-table" data-id="1">
+                <div class="content" data-id="1">
+                    <p class="titleQuestion" data-id="1">Q2</p>
+                    <p class="titleAnswer" data-id="1" style="display: none;">A2</p>
+                    <button class="show-hide" data-id="1">Show/Hide Answer</button>
+                    <div class="edit-delete" data-id="1">
+                        <button class="btn-edit" data-id="1">EDIT</button>
+                        <button class="btnDelete" data-id="1">DELETE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+<script>
+
+    var showHideButtons = document.querySelectorAll(".show-hide");
+
+    for (var i = 0; i < showHideButtons.length; i++) {
+        showHideButtons[i].addEventListener('click', function (event) {
+
+            var dataId = event.target.getAttribute('data-id');
+            console.log(dataId);
+            var titleOfAnswer = document.querySelectorAll(`p.titleAnswer[data-id="${dataId}"]`);
+
+            var p = titleOfAnswer[0];
+
+            if (p.style.display === "none") {
+                p.style.display = "inline";
+            }
+            else {
+                p.style.display = "none";
+            }
+
+        })
+    };
+    var deleteButtons = document.querySelectorAll(".btnDelete");
+
+    for (var i = 0; i < deleteButtons.length; i++) {
+
+        deleteButtons[i].addEventListener('click', function (event2) {
+
+            var dataId2 = event2.target.getAttribute('data-id');
+
+            var table = document.querySelectorAll(`div.first-table[data-id="${dataId2}"]`);
+
+            var div2 = table[0];
+
+            div2.remove();
+
+        })
+    };
+
+
+    function addQuestion() {
+        var table = document.getElementById("table");
+
+        if (table.style.display == "none") {
+            table.style.display = "block";
+        }
+        else {
+            table.style.display = "none";
+        }
+
+    }
+
+    var counter = document.getElementsByClassName("first-table").length;
+
+    function Save() {
+        var table = document.getElementById("table");
+
+        var divOne = document.createElement("div");
+        divOne.classList.add("tables");
+        document.body.appendChild(divOne);
+
+        var outerDiv = document.createElement("div");
+        outerDiv.classList.add("first-table");
+        outerDiv.setAttribute('data-id', counter);
+        divOne.appendChild(outerDiv);
+
+        var content = document.createElement("div");
+        content.classList.add("content");
+        content.setAttribute('data-id', counter);
+        outerDiv.appendChild(content);
+
+        var question2 = document.createElement("p");
+        question2.classList.add("titleQuestion");
+        question2.textContent = "";
+        question2.setAttribute('data-id', counter);
+        content.appendChild(question2);
+
+        var answer2 = document.createElement("p");
+        answer2.classList.add("titleAnswer");
+        answer2.textContent = "";
+        answer2.setAttribute('data-id', counter);
+        content.appendChild(answer2);
+
+        var btnShowHide = document.createElement("button");
+        btnShowHide.innerText = "Show/Hide Answer";
+        btnShowHide.classList.add("show-hide");
+        content.appendChild(btnShowHide);
+        btnShowHide.setAttribute('data-id', counter);
+
+        var btnEditDelete = document.createElement("div");
+        btnEditDelete.classList.add("edit-delete");
+        btnEditDelete.setAttribute('data-id', counter);
+        content.appendChild(btnEditDelete);
+
+        var btnEdit = document.createElement("button");
+        btnEdit.innerText = "EDIT";
+        btnEdit.classList.add("btn-edit");
+        btnEdit.setAttribute('data-id', counter);
+        btnEditDelete.appendChild(btnEdit);
+        content.appendChild(btnEditDelete);
+
+        var btnDelete = document.createElement("button");
+        btnDelete.innerText = "DELETE";
+        btnDelete.classList.add("btnDelete");
+        btnDelete.setAttribute('data-id', counter);
+        counter = counter + 1;
+        btnEditDelete.appendChild(btnDelete);
+        content.appendChild(btnEditDelete);
+
+        var question = document.getElementById("question");
+        question2.textContent = question.value;
+        question.value = "";
+        var answer = document.getElementById("answer");
+        answer2.textContent = answer.value;
+        answer2.style.display = "none";
+        answer.value = "";
+
+        btnShowHide.addEventListener('click', function () {
+
+            if (answer2.style.display === "none") {
+                answer2.style.display = "inline";
+            }
+            else {
+                answer2.style.display = "none";
+            }
+                                                    
+        })
+        
+
+        table.style.display = "none";
+
+        btnDelete.addEventListener('click', function () {
+            outerDiv.remove();
+            // outerDiv.parentNode.removeChild(outerDiv);
+        })
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

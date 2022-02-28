@@ -1,0 +1,51 @@
+table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+
+        td {
+            text-align: center;
+            padding-left: 17.5px;
+            padding-right: 17.5px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        th {
+            text-align: center;
+            padding-left: 17.5px;
+            padding-right: 17.5px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+
+        }
+
+        #table {
+            margin-top: 40px;
+        }
+
+        #tr2 {
+            height: 27px;
+
+        }
+
+        #tr3 {
+            height: 27px;
+
+        }
+
+        #tr4 {
+            height: 27px;
+        }
+
+        #tr5 {
+            height: 27px;
+        }
+
+        #tr6 {
+            height: 27px;
+
+        }

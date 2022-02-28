@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.internal_content {
+    text-align: center;
+    height: 100vh;
+}
+
+.internal_content h1 {
+    margin-bottom: 20px;
+    color: green;
+}
+
+h1 {
+    font-size: 170px;
+}
+
+button {
+    font-size: 30px;
+    padding: 4px 18px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 3px;
+}
+
+.btn2 {
+    margin-left: 25px;
+    margin-right: 25px;
+}

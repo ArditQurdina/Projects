@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table-with-javascript</title>
+    <link rel="stylesheet" href="css/table-with-javascript.css">
+</head>
+
+<body>
+
+    <input type="text" id="inputText">
+
+    <button class="btnSearch" onclick="clickSearch()">Search</button>
+
+</body>
+
+
+<script>
+
+function createTable(listOfPeople) {
+    
+    var table = document.createElement("table");
+table.id = "table";
+document.body.appendChild(table);
+
+for (let i = 0; i < listOfPeople.length; i++) {
+    table.insertRow(i);
+    for (let j = 0; j < 3; j++) {
+        table.rows[i].insertCell(j);
+    }
+    table.rows[i].cells[0].textContent = listOfPeople[i].name;
+    table.rows[i].cells[1].textContent = listOfPeople[i].surname;
+    table.rows[i].cells[2].textContent = listOfPeople[i].age;
+
+}
+}
+
+    var myTable = [
+        {
+            name: "Name",
+            surname: "Surname",
+            age: "Age"
+        },
+        {
+            name: "Agon",
+            surname: "Qurdina",
+            age: "28"
+        },
+        {
+            name: "Ardit",
+            surname: "Qurdina",
+            age: "26"
+        },
+        {
+            name: "Etnor",
+            surname: "Qurdina",
+            age: "22"
+        },
+        {
+            name: "Endrit",
+            surname: "Qurdina",
+            age: "21"
+        },
+        {
+            name: "Armir",
+            surname: "Qurdina",
+            age: "21"
+        }
+    ]
+    
+createTable(myTable);
+
+
+function clickSearch() {
+
+    var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("inputText");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("table");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+
+
+    /*
+        table.rows[0].cells[0].textContent = myTable[0].name;
+        table.rows[0].cells[1].textContent = myTable[0].surname;
+        table.rows[0].cells[2].textContent = myTable[0].age;
+    
+        table.rows[1].cells[0].textContent = myTable[1].name;
+        table.rows[1].cells[1].textContent = myTable[1].surname;
+        table.rows[1].cells[2].textContent = myTable[1].age;
+    
+        table.rows[2].cells[0].textContent = myTable[2].name;
+        table.rows[2].cells[1].textContent = myTable[2].surname;
+        table.rows[2].cells[2].textContent = myTable[2].age;
+    
+        table.rows[3].cells[0].textContent = myTable[3].name;
+        table.rows[3].cells[1].textContent = myTable[3].surname;
+        table.rows[3].cells[2].textContent = myTable[3].age;
+    
+        table.rows[4].cells[0].textContent = myTable[4].name;
+        table.rows[4].cells[1].textContent = myTable[4].surname;
+        table.rows[4].cells[2].textContent = myTable[4].age;
+    
+        table.rows[5].cells[0].textContent = myTable[5].name;
+        table.rows[5].cells[1].textContent = myTable[5].surname;
+        table.rows[5].cells[2].textContent = myTable[5].age; */
+
+  /*  for (let i = 0; i < 6; i++) {
+        table.rows[i].cells[0].textContent = myTable[i].name;
+        table.rows[i].cells[1].textContent = myTable[i].surname;
+        table.rows[i].cells[2].textContent = myTable[i].age;
+    } */
+
+</script>
+
+
+</html>

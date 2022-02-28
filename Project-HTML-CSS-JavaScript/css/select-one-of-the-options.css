@@ -1,0 +1,125 @@
+body {
+    background-color: skyblue;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.container {
+    width: 830px;
+    height: 100vh;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: space-around;
+    margin-right: 260px;
+    margin-left: 260px;
+    background-color: yellow;
+    border: none;
+
+
+}
+
+#first {
+
+    font-size: 30px;
+    border: 4px green solid;
+    width: 120px;
+    height: 115px;
+    margin-right: 7px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#options {
+    width: 50px;
+    height: 30px;
+    margin: auto 0px;
+}
+
+#option1 {
+    font-size: 40px;
+    margin: auto 0px;
+
+
+
+}
+
+#option2 {
+    font-size: 40px;
+    margin: auto 0px;
+
+
+
+}
+
+#option3 {
+    font-size: 40px;
+    margin: auto 0px;
+
+
+
+}
+
+#option4 {
+    font-size: 40px;
+    margin: auto 0px;
+
+
+
+}
+
+#third {
+    font-size: 30px;
+    border: 4px blue solid;
+    width: 120px;
+    height: 115px;
+    margin-left: 8px;
+    margin-right: 7px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#fourth {
+    font-size: 30px;
+    margin: auto 0px;
+    margin-right: 7px;
+
+}
+
+#sum {
+
+    height: 33px;
+    width: 198px;
+    margin: auto 0px;
+    margin-right: 7px;
+    border: 2px lightgreen solid;
+}
+
+#btn1 {
+    height: 39px;
+    width: 112px;
+    margin: auto 0px;
+    color: white;
+    background-color: red;
+    border: 2px lightblue solid;
+    border-radius: 2px;
+
+}
+
+#btn2 {
+    height: 39px;
+    width: 112px;
+    margin: auto 0px;
+    color: white;
+    background-color: red;
+    border: 2px lightblue solid;
+    border-radius: 2px;
+}

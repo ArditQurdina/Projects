@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase-decrease-reset</title>
+    <link rel="stylesheet" href="css/increase-decrease-reset.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="internal_content">
+            <h1 id="number">3</h1>
+            <div class="btn">
+                <button onclick="Increase()">Increase</button>
+                <button onclick="Reset()" class="btn2">Reset</button>
+                <button onclick="Decrease()">Decrease</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+
+    function Increase() {
+
+        // document.getElementById("number").innerHTML++
+        var value = document.getElementById("number");
+
+        value.innerHTML = parseInt(value.innerHTML) + 1;
+
+    }
+
+    function Decrease() {
+        
+        // document.getElementById("number").innerHTML++
+        var value2 = document.getElementById("number")
+
+        value2.innerHTML = parseInt(value2.innerHTML) - 1;
+
+        if (value2.innerHTML < 0) {
+            value2.innerHTML = 0;
+        }
+
+    }
+
+    function Reset() {
+
+        document.getElementById("number").innerHTML = 0;
+
+
+    }
+
+
+</script>
+
+</html>
