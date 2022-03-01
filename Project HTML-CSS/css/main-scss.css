@@ -557,6 +557,10 @@ html {
   margin: 0px;
 }
 
+.first_section_home-page {
+  background-image: url("../img/augustine-wong-wjL78m4a2qM-unsplash.png");
+}
+
 .first_section_home-page .menu {
   font-family: 'GT Haptik';
   -webkit-text-decoration-line: none;
@@ -674,6 +678,7 @@ html {
 
 .fourth_section_home-page {
   background-color: black;
+  border-bottom: 1px solid #707070;
 }
 
 .fourth_section_home-page .div-of-fourth-section {

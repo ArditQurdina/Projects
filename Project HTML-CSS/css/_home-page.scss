@@ -1,7 +1,7 @@
 @import "./variables";
 
 .first_section_home-page {
-    
+    background-image: url("../img/augustine-wong-wjL78m4a2qM-unsplash.png");
     .menu {
         @include menu1($color3);
     }
@@ -105,6 +105,7 @@
 
 .fourth_section_home-page {
     background-color: $color3;
+    border-bottom: 1px solid #707070;
 
     .div-of-fourth-section {
         padding-top: 150px;
