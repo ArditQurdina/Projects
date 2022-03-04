@@ -22,11 +22,11 @@ html {
 }
 
 .header-of-first-section .shake-swiss {
-  width: 150px;
+  width: 120px;
 }
 
 .readMore_Button {
-  padding: 12px 30px;
+  padding: 11px 24px;
   text-align: center;
   border-radius: 22px;
   background: none;
@@ -37,7 +37,7 @@ html {
 .inside_of_the_button {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .three_divs {
@@ -572,11 +572,23 @@ html {
 }
 
 .first_section_home-page .title-and-readMore-of-first-section {
-  margin-top: 100px;
+  margin-top: 55px;
+}
+
+@media (max-width: 768px) {
+  .first_section_home-page .title-and-readMore-of-first-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .first_section_home-page .title-and-readMore-of-first-section {
+    margin-top: 90px;
+  }
 }
 
 .first_section_home-page .title-and-readMore-of-first-section .first_button {
-  border: 1.4px solid;
   color: #D60B1A;
   background-color: white;
   border: 1px solid #D60B1A;
@@ -585,12 +597,12 @@ html {
 .first_section_home-page .title-and-readMore-of-first-section .first_button .inside_of_the_first_button {
   color: #D60B1A;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .first_section_home-page .title-and-readMore-of-first-section .title {
   font-family: Helvetica;
-  font-size: 70px;
+  font-size: 54px;
   font-weight: 400;
   line-height: 75px;
 }
@@ -656,6 +668,9 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: auto;
   width: 1146.65px;
 }
