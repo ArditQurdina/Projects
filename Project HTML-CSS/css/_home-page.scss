@@ -8,15 +8,15 @@
     }
 
     .title-and-readMore-of-first-section {
-        margin-top: 55px;
+        margin-top: 80px;
 
         @include tablet {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 55px;
         }
 
         @include last {
-            margin-top: 90px;
+            margin-top: 95px;
         }
         
         .first_button {
@@ -87,29 +87,32 @@
     }
 }
 
-.images__container {
+.images_main {
     padding-top: 150px;
     padding-bottom: 150px;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    width: 1146.65px;
+    justify-content: flex-end;
 
-    .image {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    
-    .paragraph {
-        padding-right: 20px;
-        margin: 0px;
-        padding-top: 12px;
-    }
+    .images__container {
+        display: flex;
+        width: 85%;
 
-    .date {
-        margin: 0px;
-        padding-bottom: 12px;
+        .image {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .paragraph {
+            padding-right: 20px;
+            margin: 0px;
+            padding-top: 12px;
+        }
+
+        .date {
+            margin: 0px;
+            padding-bottom: 12px;
+        }
     }
 }
 

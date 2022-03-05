@@ -1,7 +1,10 @@
 body,
 html {
-  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 .first_section {
@@ -572,19 +575,19 @@ html {
 }
 
 .first_section_home-page .title-and-readMore-of-first-section {
-  margin-top: 55px;
+  margin-top: 80px;
 }
 
 @media (max-width: 768px) {
   .first_section_home-page .title-and-readMore-of-first-section {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 55px;
   }
 }
 
 @media (min-width: 1281px) {
   .first_section_home-page .title-and-readMore-of-first-section {
-    margin-top: 90px;
+    margin-top: 95px;
   }
 }
 
@@ -659,34 +662,37 @@ html {
   font-size: 18px;
 }
 
-.images__container {
+.images_main {
   padding-top: 150px;
   padding-bottom: 150px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: auto;
-  width: 1146.65px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.images__container .image {
+.images_main .images__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+}
+
+.images_main .images__container .image {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.images__container .paragraph {
+.images_main .images__container .paragraph {
   padding-right: 20px;
   margin: 0px;
   padding-top: 12px;
 }
 
-.images__container .date {
+.images_main .images__container .date {
   margin: 0px;
   padding-bottom: 12px;
 }
