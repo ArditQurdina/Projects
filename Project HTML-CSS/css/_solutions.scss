@@ -10,6 +10,14 @@
 
 .background-sante-securite {
     background-image: url("../img/weiye-tan-thiDDoQZpRA-unsplash.png");
+    @include mobile {
+        .firstDiv {
+            margin-bottom: 45px;
+        }
+        .thirdDiv {
+            margin-top: 45px;
+        }
+    }
 }
 
 .first_section {
@@ -19,10 +27,205 @@
     }
 }
 
+.only_mesure {
+    @include mobile {
+        height: 70%;
+    }
+        .shake-swiss {
+            @media (max-width: 1000px) and (min-width: 850px) {
+                width: 109px;
+            }
+            @media (max-width: 849px) and (min-width: 730px) {
+                width: 102px;
+            }
+            @media (max-width: 729px) {
+                width: 96px;
+            }
+        }
+        .mutual_menu {
+            @include menu1($hexColor2);
+            @media (max-width: 1000px) and (min-width: 850px) {
+                font-size: 18.5px;
+            }
+            @media (max-width: 849px) and (min-width: 730px) {
+                font-size: 17.5px;
+            }
+            @media (max-width: 729px) and (min-width: 481px) {
+                font-size: 16.5px;
+            }
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+        .inside_of_the_button {
+            @media (max-width: 1000px) and (min-width: 850px) {
+            font-size: 15.5px;
+            }
+            @media (max-width: 849px) and (min-width: 730px) {
+                font-size: 15px;
+            }
+            @media (max-width: 729px) {
+                font-size: 14.5px;
+            }
+        }
+        .three_divs {
+            @media (max-width: 849px) and (min-width: 730px) {
+                width: 75%;
+            }
+            @media (max-width: 729px) {
+                width: 69%;
+            }
+    
+        }
+        .firstDiv {
+            @media (max-width: 1000px) and (min-width: 850px) {
+                font-size: 27.5px;
+            }
+            @media (max-width: 849px) and (min-width: 730px) {
+                font-size: 26px;
+            }
+            @media (max-width: 729px) and (min-width: 481px) {
+                font-size: 24px;
+            }
+            @include mobile {
+                font-size: 23px;
+                letter-spacing: 1.4px;
+            }
+        }
+        .secondDiv {
+            @media (max-width: 1000px) and (min-width: 850px) {
+                font-size: 57px;
+            }
+            @media (max-width: 849px) and (min-width: 730px) {
+                font-size: 49px;
+            }    
+            @media (max-width: 729px) and (min-width: 481px) {
+                font-size: 43px;
+            }
+            @include mobile {
+                font-size: 40px;
+            }
+    }
+}
+
+.assessment_and_sante_securite {
+    @include mobile {
+        height: 70%;
+    }
+        .shake-swiss {
+            @media (max-width: 720px) and (min-width: 620px) {
+                width: 109px;
+            }
+            @media (max-width: 619px) and (min-width: 540px) {
+                width: 102px;
+            }
+            @media (max-width: 539px) {
+                width: 96px;
+            }
+        }
+        .mutual_menu {
+            @include menu1($hexColor2);
+            @media (max-width: 720px) and (min-width: 620px) {
+                font-size: 18.5px;
+            }
+            @media (max-width: 619px) and (min-width: 540px) {
+                font-size: 17.5px;
+            }
+            @media (max-width: 539px) and (min-width: 481px) {
+                font-size: 16.5px;
+            }
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+        .inside_of_the_button {
+            @media (max-width: 720px) and (min-width: 620px) {
+            font-size: 15.5px;
+            }
+            @media (max-width: 619px) and (min-width: 540px) {
+                font-size: 15px;
+            }
+            @media (max-width: 539px) and (min-width: 481px) {
+                font-size: 14.5px;
+            }
+        }
+        .three_divs {
+            @media (max-width: 720px) and (min-width: 620px) {
+                width: 75%;
+            }
+            @media (max-width: 619px) {
+                width: 69%;
+            }
+        }
+        .firstDiv {
+            @media (max-width: 720px) and (min-width: 620px) {
+                font-size: 27.5px;
+            }
+            @media (max-width: 619px) and (min-width: 540px) {
+                font-size: 26px;
+            }
+            @media (max-width: 539px) and (min-width: 481px) {
+                font-size: 24px;
+            }
+            @include mobile {
+                font-size: 23px;
+                letter-spacing: 1.4px;
+            }
+        }
+        .secondDiv {
+            @media (max-width: 720px) and (min-width: 620px) {
+                font-size: 57px;
+            }
+            @media (max-width: 619px) and (min-width: 540px) {
+                font-size: 49px;
+            }
+            @media (max-width: 539px) and (min-width: 481px) {
+                font-size: 43px;
+            }
+            @include mobile {
+                font-size: 40px;
+            }
+    }
+}
+
 .second_section_solutions {
     .div-of-second-section {
         @include padding1();
         @include flexBox1(flex-start, row, nowrap, stretch);
+    }
+}
+
+.second_of_all {
+    .div-of-second-section {
+        @media (max-width: 1290px) and (min-width: 768px) {
+            padding: 110px 0px;
+        }
+        @media (max-width: 767px) and (min-width: 481px) {
+            padding: 90px 0px;
+        }
+        @include mobile {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        @media (max-width: 1290px) {
+            @include flexBox1(center, column, nowrap, stretch);
+            width: 100%;
+            text-align: center;
+            .right_div_solutions {
+                @media (max-width: 1290px) and (min-width: 768px) {
+                    padding-top: 35px;
+                    width: 625px;
+                }
+                @media (max-width: 767px) and (min-width: 481px) {
+                    width: 76%;
+                    @include justifyCenter();
+                }
+                @include mobile {
+                    width: 76%;
+                    @include justifyCenter();
+                }
+            }
+        }
     }
 }
 
@@ -53,14 +256,183 @@
     }
 }
 
+.third_of_mesure {
+    .div-of-third-section {
+        @media (max-width: 767px) {
+            @include flexBox1(center, column, nowrap, stretch);
+        }            
+        @media (max-width: 1290px) and (min-width: 768px) {
+            padding: 110px 0px;
+        }
+        @media (max-width: 767px) and (min-width: 481px) {
+            padding: 90px 0px;
+        }
+        @include mobile {
+            padding: 60px 0px;
+        }
+        
+        .lower-div-left-and-right {
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            .right_div_third {
+                @media (max-width: 1240px) and (min-width: 1090px) {
+                    width: 73%;
+                }
+                @media (max-width: 1089px) and (min-width: 956px) {
+                    width: 69%;
+                }
+                @media (max-width: 955px) and (min-width: 870px) {
+                    width: 65%;
+                }
+                @media (max-width: 869px) and (min-width: 768px) {
+                    width: 61%;
+                }
+                @media (max-width: 767px) {
+                    text-align: center;
+                    margin-top: -55px;
+                }
+                @media (max-width: 767px) and (min-width: 481px) {
+                    width: 100%;
+                }
+                @include mobile {
+                    width: 85%;
+                }
+            }
+            .left-lower-div {
+                @media (max-width: 767px) {
+                    padding-top: 55px;
+                }
+            }
+        }
+    }
+}
 
+.third_of_assessment {
+    .div-of-third-section {
+        @media (max-width: 767px) {
+        @include flexBox1(center, column, nowrap, stretch);
+        }
+        @media (max-width: 1290px) and (min-width: 768px) {
+            padding: 110px 0px;
+        }
+        @media (max-width: 767px) and (min-width: 481px) {
+            padding: 90px 0px;
+        }
+        @include mobile {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .lower-div-left-and-right {
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            .right_div_third {
+                @media (max-width: 1310px) and (min-width: 1200px) {
+                    width: 74%;
+                }
+                @media (max-width: 1199px) and (min-width: 1110px) {
+                    width: 72%;
+                }
+                @media (max-width: 1109px) and (min-width: 1040px) {
+                    width: 70%;
+                }
+                @media (max-width: 1039px) and (min-width: 960px) {
+                    width: 68%;
+                }
+                @media (max-width: 959px) and (min-width: 900px) {
+                    width: 66%;
+                }
+                @media (max-width: 899px) and (min-width: 840px) {
+                    width: 63%;
+                }
+                @media (max-width: 839px) and (min-width: 768px) {
+                    width: 60%;
+                }
+                @media (max-width: 767px) {
+                    text-align: center;
+                    margin-top: -55px;
+                }
+                @media (max-width: 767px) and (min-width: 481px) {
+                    width: 100%;
+                }
+                @include mobile {
+                    width: 90%;
+                }
+            }
+            .left-lower-div {
+                @media (max-width: 767px) {
+                    padding-top: 55px;
+                }
+            }
+        }
+    }
+}
+
+.third_of_sante_securite {
+    .div-of-third-section {
+        @media (max-width: 767px) {
+        @include flexBox1(center, column, nowrap, stretch);
+        }
+        @media (max-width: 1290px) and (min-width: 768px) {
+            padding: 110px 0px;
+        }
+        @media (max-width: 767px) and (min-width: 481px) {
+            padding: 90px 0px;
+        }
+        @include mobile {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        
+        .lower-div-left-and-right {
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            .right_div_third {
+                @media (max-width: 905px) and (min-width: 768px) {
+                    width: 72%;
+                }
+                @media (max-width: 767px) {
+                    text-align: center;
+                    margin-top: -55px;
+                }
+                @media (max-width: 767px) and (min-width: 481px) {
+                    width: 100%;
+                }
+                @include mobile {
+                    width: 90%;
+                }
+            }
+            .left-lower-div {
+                @media (max-width: 767px) {
+                    padding-top: 55px;
+                }
+            }
+        }
+    }
+}
 
 .left_div_solutions {
     @include leftDiv($hexColor1, 27px);
 }
 
-.right_div_solutions {
-    width: 705px;
+.right_div_second {
+    width: 820px;
     font-size: 17px;
     margin: 0px;
+}
+
+.right_div_third {
+    width: 76%;
+    margin: 0px;
+    font-size: 17px;
 }

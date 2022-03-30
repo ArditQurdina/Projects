@@ -3,20 +3,49 @@
 
 .first_section_home-page {
     background-image: url("../img/augustine-wong-wjL78m4a2qM-unsplash.png");
-    .menu {
-        @include menu1($color3);
+    @include mobile {
+        height: 50%;
     }
+    @include Ipad {
+        height: 65%;
+    }
+    
+    .header-of-first-section {
+        @include mobile {
+            width: 85%;
+            padding: 15px 0px;
+        }
+        
+        .menu {
+            @include menu1($color3);
+            
+            @include mobile {
+            font-size: 17px;
+            }
+        }
 
+        .shake-swiss {
+            @include mobile {
+                width: 90px;
+            }
+        }
+    }
     .title-and-readMore-of-first-section {
         margin-top: 80px;
 
+        @include mobile {
+            text-align: center;
+            margin-top: 25px;
+            width: 100%;
+        }
+        
         @include tablet {
             text-align: center;
-            margin-top: 55px;
+            margin-top: 65px;
         }
 
         @include last {
-            margin-top: 95px;
+            margin-top: 100px;
         }
         
         .first_button {
@@ -28,6 +57,10 @@
                 color: $hexColor1;
                 text-decoration: none;
                 font-size: 16px;
+
+                @include mobile {
+                    font-size: 14px;
+                }
             }    
         }
 
@@ -36,27 +69,63 @@
             font-size: 54px;
             font-weight: 400;
             line-height: 75px;
+            
+            @include mobile {
+                font-size: 38px;
+                line-height: 56px;
+                letter-spacing: 2.4px;
+            }
         }
     }
 }
-    
+    .white_space_home_page {
+        @include mobile {
+        height: 4.5%;
+        }
+        @include Ipad {
+            height: 4.5%;
+        }
+    }
 
 .second_section_home-page {
     background-color: $hexColor1;
     padding: 150px 0px;
+    @include mobile {
+        padding: 60px 0px;
+    }
+    @include Ipad {
+        padding: 90px 0px;
+    }
 
     .div-of-second-section {
         color: $hexColor2;
         font-family: Helvetica;
 
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .first-part-of-div-of-second-section {
-            font-size: 40px;
+            font-size: 32px;
             margin: 0px;
+            @include mobile {
+                font-size: 26px;
+            }
         }
         
         .second-part-of-div-of-second-section {
             margin-top: 25px;
-            
+            font-size: 21px;
+            @include mobile {
+                font-size: 19px;
+            }
         }
 
         .last-part-of-div-of-second-section {
@@ -65,21 +134,58 @@
             align-items: flex-end;
             margin-top: 25px;
 
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 0px;
+                width: 100%;
+            }
+
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 0px;
+                width: 100%;
+            }
+
             .first-of-last {
                 margin: 0px;
+                font-size: 21px;
+                @include mobile {
+                    margin-top: 25px;
+                    font-size: 19px;
+                }
+                @include tablet {
+                    margin-top: 25px;
+                }
             }
+            
             .second-of-last {
                 margin: 0px;
+                @include mobile {
+                    margin-top: 25px;
+                }
+                @include tablet {
+                    margin-top: 25px;
+                }
 
                 .second_button {
                     color: $hexColor2;
                     background-color: $color3;
-                    border: 1.4px solid $color3;
+                    border: 1.4px solid $hexColor1;
+                    @include mobile {
+                        padding: 11px 22px;
+                    }
 
                     .inside_of_the_second_button {
                         color: $hexColor2;
                         text-decoration: none;
                         font-size: 18px;
+                        @include mobile {
+                            font-size: 17px;
+                        }
                     }
                 }
             }
@@ -90,28 +196,50 @@
 .images_main {
     padding-top: 150px;
     padding-bottom: 150px;
-    width: 100%;
     display: flex;
-    justify-content: flex-end;
-
+    @media (max-width: 1250px) {
+        padding: 40px 0px;
+    }
+    
     .images__container {
         display: flex;
-        width: 85%;
+        width: 100%;
+        justify-content: center;
+
+        @media (max-width: 1250px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        
+            .img__container {
+                padding: 40px 0px;
+            }
+        }
 
         .image {
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+
+            @media (max-width: 480px) {
+                .three_images {
+                    width: 340px;
+                    height: 215px;
+                }
+            }
         }
         
         .paragraph {
             padding-right: 20px;
             margin: 0px;
             padding-top: 12px;
+            font-size: 16px;
         }
 
         .date {
             margin: 0px;
             padding-bottom: 12px;
+            font-size: 16px;
         }
     }
 }
@@ -119,63 +247,125 @@
 .fourth_section_home-page {
     background-color: $color3;
     border-bottom: 1px solid #707070;
-
+    
     .div-of-fourth-section {
-        padding-top: 150px;
-        padding-bottom: 150px;
-        width: 66%;
-        margin: auto;
+        padding-top: 120px;
+        padding-bottom: 120px;    
+            width: 85%;
+            margin: auto;
+            @media (max-width: 1010px) and (min-width: 768px) {
+                width: 77%;
+                padding-top: 95px;
+                padding-bottom: 95px;
+            }
+
+            @media (max-width: 767px) and (min-width: 481px) {
+                width: 60%;
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+
+            @media (max-width: 480px) {
+                padding-top: 70px;
+                padding-bottom: 70px;
+            }
+            
         @include flexBox1(center, row, wrap, stretch);
 
+        @media (max-width: 767px) {
+            @include flexBox1(center, column, nowrap, stretch)
+        }
+
+        @include mobile {
+            width: 80%;
+        }
+
         .title-of-div-of-fourth-section {
-            font-size: 27px; 
             font-family: Helvetica; 
             color: $hexColor2; 
             margin: auto;
+            margin-bottom: 60px;
+            font-size: 25px;
+            letter-spacing: 1.5px;
+            font-weight: 380;
+
+            @media (max-width: 1010px) and (min-width: 768px) {
+                margin-bottom: 70px;
+            }
+            
+            @media (max-width: 767px) and (min-width: 481px) {
+                margin-bottom: 70px;
+                text-align: center;
+            }
+            @include mobile {
+                font-size: 20px;
+                margin-bottom: 60px;
+            }
         }
 
         .list-of-logos {
             width: 100%;
             @include flexBox1(center, row, wrap, stretch);
-            margin-top: 150px;
+            @media (max-width: 767px) {
+                justify-content: center;            
+            }
+
+            @media (max-width: 767px) {
+                @include flexBox1(center, column, nowrap, stretch)
+            }
+
+            .same_margin {
+                margin: 60px 6%;
+                @media (max-width: 1010px) and (min-width: 768px) {
+                    margin: 70px 14%;
+                }
+                @media (max-width: 767px) and (min-width: 481px) {
+                    margin: 70px 0%;
+                }
+                @include mobile {
+                    margin: 60px 0%;
+                }
+            }
+
+            
+
+            @include mobile {
+                .width-of-15 {
+                    width: 20%;
+                }
+                .width-of-10 {
+                    width: 15%;
+                }
+            }
         }
 
         .seeMore_Button {
             color: $hexColor2; 
-            font-size: 18px; 
             word-spacing: 1.5px;
             margin-left: auto;
             margin-right: -20px;
             border: none; 
             background: none;
-            margin-top: 150px;
-        }
-    }
-}
-
-.fifth_section_home-page {
-
-    .div-of-fifth-section {
-        width: 45%;
-        padding-top: 150px;
-        padding-bottom: 150px;
-        margin: auto;
-        text-align: center;
-        color: $color3;
-        font-family: Helvetica;
-
-        .title-of-div-of-fifth-section {
-            font-size: 25px;
-            letter-spacing: 2.1px;
+            margin-top: 60px;
+            font-size: 16px;
+            @media (max-width: 1010px) and (min-width: 768px) {
+                margin-top: 70px;
+            }
+            @media (max-width: 767px) and (min-width: 481px) {
+                margin-top: 70px;
+            }
+            @include mobile {
+                margin-top: 60px;
+            }
         }
     }
 }
 
 .font-size-of-20px {
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .space_inside_the_button {
-    margin-left: 20px;
+    margin-left: 20px;    
 }
 

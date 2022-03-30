@@ -16,10 +16,300 @@
     background-image: url("../img/tim-mossholder-1NnP799xWDw-unsplash.png");
 }
 
-.first_section {
-    .menu {
-        @include menu1($hexColor2);
+.only_fusions {
+    @include mobile {
+        height: 70%;
     }
+    
+    .shake-swiss {
+        @media (max-width: 1024px) and (min-width: 880px) {
+            width: 110px;
+        }
+        @media (max-width: 879px) and (min-width: 768px) {
+            width: 105px;
+        }
+        @media (max-width: 767px) and (min-width: 705px) {
+            width: 100px;
+        }
+        @media (max-width: 704px) {
+            width: 96px;
+        }
+    }
+
+    .menu_fusions {
+        @include menu1($hexColor2);
+        @media (max-width: 1024px) and (min-width: 880px) {
+            font-size: 19px;
+        }
+        @media (max-width: 879px) and (min-width: 768px) {
+            font-size: 18px;
+        }
+        @media (max-width: 767px) and (min-width: 705px) {
+            font-size: 17px;
+        }
+        @media (max-width: 704px) and (min-width: 481px) {
+            font-size: 16.5px;
+        }
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    .inside_of_the_button {
+        @media (max-width: 1024px) and (min-width: 880px) {
+            font-size: 16px;
+        }
+        @media (max-width: 879px) and (min-width: 768px) {
+            font-size: 15px;
+        }
+        @media (max-width: 767px) and (min-width: 705px) {
+            font-size: 14.5px;
+        }
+        @media (max-width: 704px) {
+            font-size: 14px;
+        }
+    }
+    .three_divs {
+        @media (max-width: 705px) {
+            width: 63%;
+        }
+    }
+    .firstDiv {
+        @media (max-width: 1024px) and (min-width: 880px) {
+            font-size: 29px;
+        }
+        @media (max-width: 879px) and (min-width: 768px) {
+            font-size: 27px;
+        }
+        @media (max-width: 767px) and (min-width: 705px) {
+            font-size: 25px;
+        }
+        @media (max-width: 704px) and (min-width: 481px) {
+            font-size: 24px;
+        }
+        @include mobile {
+            font-size: 23px;
+            letter-spacing: 1.4px;
+        }
+    }
+
+    .secondDiv {
+        @media (max-width: 1024px) and (min-width: 880px) {
+            font-size: 61px;
+        }
+        @media (max-width: 879px) and (min-width: 768px) {
+            font-size: 54px;
+        }
+        @media (max-width: 767px) and (min-width: 705px) {
+            font-size: 48px;
+        }
+        @media (max-width: 704px) and (min-width: 481px) {
+            font-size: 43px;
+        }
+        @include mobile {
+            font-size: 40px;
+        }
+    }
+}
+
+.only_transformation {
+    @include mobile {
+        height: 70%;
+        .header-of-first-section {
+            width: 75%;
+        }
+    }
+
+    
+
+    .shake-swiss {
+        @media (max-width: 899px) and (min-width: 810px) {
+            width: 112px;
+        }
+        @media (max-width: 809px) and (min-width: 768px) {
+            width: 108px;
+        }
+        @media (max-width: 767px) and (min-width: 670px) {
+            width: 104px;
+        }
+        @media (max-width: 669px) and (min-width: 620px) {
+            width: 100px;
+        }
+        @media (max-width: 619px) {
+            width: 96px;
+        }
+    }
+    .menu_transformation {
+        @include menu1($hexColor2);
+        @media (max-width: 899px) and (min-width: 810px) {
+            font-size: 19px;
+        }
+        @media (max-width: 809px) and (min-width: 768px) {
+            font-size: 18px;
+        }
+        @media (max-width: 767px) and (min-width: 670px) {
+            font-size: 17.5px;
+        }
+        @media (max-width: 669px) and (min-width: 620px) {
+            font-size: 17px;
+        }
+        @media (max-width: 619px) {
+            font-size: 16.5px;
+        }
+    }
+    .inside_of_the_button {
+        @media (max-width: 899px) and (min-width: 810px) {
+            font-size: 16px;
+        }
+        @media (max-width: 809px) and (min-width: 768px) {
+            font-size: 15px;
+        }
+        @media (max-width: 767px) and (min-width: 670px) {
+            font-size: 14.5px;
+        }
+        @media (max-width: 669px) and (min-width: 620px) {
+            font-size: 14px;
+        }
+        @media (max-width: 619px) {
+            font-size: 13.5px;
+        }
+    }
+    .firstDiv {
+        @media (max-width: 899px) and (min-width: 810px) {
+            font-size: 28px;
+        }
+        @media (max-width: 809px) and (min-width: 768px) {
+            font-size: 27px;
+        }
+        @media (max-width: 767px) and (min-width: 670px) {
+            font-size: 26px;
+        }
+        @media (max-width: 669px) and (min-width: 620px) {
+            font-size: 25px;
+        }
+        @media (max-width: 619px) and (min-width: 481px) {
+            font-size: 24px;
+        }
+        @include mobile {
+            font-size: 22px;
+            letter-spacing: 1.5px;
+        }
+    }
+    .secondDiv {
+        @media (max-width: 899px) and (min-width: 810px) {
+            font-size: 61px;
+        }
+        @media (max-width: 809px) and (min-width: 768px) {
+            font-size: 56px;
+        }
+        @media (max-width: 767px) and (min-width: 670px) {
+            font-size: 50px;
+        }
+        @media (max-width: 669px) and (min-width: 620px) {
+            font-size: 45px;
+        }
+        @media (max-width: 619px) and (min-width: 481px) {
+            font-size: 41px;
+            letter-spacing: 1.1px;
+        }
+        @include mobile {
+            font-size: 35px;
+        }
+    }
+}
+
+.only_optimisation {
+    @include mobile {
+        height: 70%;
+        .header-of-first-section {
+            width: 75%;
+        }
+    }
+
+    .shake-swiss {
+        @media (max-width: 780px) and (min-width: 700px) {
+            width: 108px;
+        }
+        @media (max-width: 699px) and (min-width: 650px) {
+            width: 104px;
+        }
+        @media (max-width: 649px) and (min-width: 600px) {
+            width: 100px;
+        }
+        @media (max-width: 599px) {
+            width: 96px;
+        }
+    }
+
+    .menu_optimisation {
+        @include menu1($hexColor2);
+        @media (max-width: 780px) and (min-width: 700px) {
+            font-size: 18px;
+        }
+        @media (max-width: 699px) and (min-width: 650px) {
+            font-size: 17.5px;
+        }
+        @media (max-width: 649px) and (min-width: 600px) {
+            font-size: 17px;
+        }
+        @media (max-width: 599px) {
+            font-size: 16.5px;
+        }
+    }
+    
+    .inside_of_the_button {
+        @media (max-width: 780px) and (min-width: 700px) {
+            font-size: 15px;
+        }
+        @media (max-width: 699px) and (min-width: 650px) {
+            font-size: 14.5px;
+        }
+        @media (max-width: 649px) and (min-width: 600px) {
+            font-size: 14px;
+        }
+        @media (max-width: 599px) and (min-width: 481px) {
+            font-size: 13.5px;
+        }
+    }
+    
+    .firstDiv {
+        @media (max-width: 780px) and (min-width: 700px) {
+            font-size: 27px;
+        }
+        @media (max-width: 699px) and (min-width: 650px) {
+            font-size: 26px;
+        }
+        @media (max-width: 649px) and (min-width: 600px) {
+            font-size: 25px;
+        }
+        @media (max-width: 599px) and (min-width: 481px) {
+            font-size: 24px;
+        }
+        @include mobile {
+            font-size: 22px;
+            letter-spacing: 1.5px;
+        }   
+    }
+    
+    .secondDiv {
+        @media (max-width: 780px) and (min-width: 700px) {
+            font-size: 59px;
+        }
+        @media (max-width: 699px) and (min-width: 650px) {
+            font-size: 53px;
+        }
+        @media (max-width: 649px) and (min-width: 600px) {
+            font-size: 47px;
+        }
+        @media (max-width: 599px) and (min-width: 481px) {
+            font-size: 41px;
+            letter-spacing: 1.1px;
+        }
+        @include mobile {
+            font-size: 35px;
+        }
+    }
+
 }
 
 .second_section_consulting {
@@ -27,7 +317,7 @@
     .div-of-second-section  {
         @include padding1();
         @include flexBox1(flex-start, row, nowrap, stretch);
-
+        
 
         .left-part-of-div-of-second-section {
             color: $hexColor1;
@@ -35,8 +325,7 @@
 
         .right-part-of-div-of-second-section {
             @include flexBox1(stretch, column, nowrap, stretch);
-            flex-direction: column;
-
+            
             .first-right-part-second-section {
                 margin-bottom: 30px;
             }
@@ -48,9 +337,121 @@
         .first-mutual-font-size {
             font-size: 27px;
         }
+    }
+}
 
-        .second-mutual-font-size {
-            font-size: 17px;
+.second_of_fusions {
+    .div-of-second-section {
+        @media (max-width: 1280px) and (min-width: 768px) {
+            padding: 110px 0px;
+        }
+        @media (max-width: 767px) and (min-width: 481px) {
+            padding: 90px 0px;
+        }
+        @include mobile {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        @media (max-width: 1280px) {
+            @include flexBox1(center, column, nowrap, stretch);
+            width: 100%;
+        @media (max-width: 930px) and (min-width: 800px) {
+            width: 80%;
+        } 
+            .right-part-of-div-of-second-section {
+                @media (max-width: 1280px) {
+                    padding-top: 35px;
+                    width: auto;
+                    display: flex;
+                    align-items: center;
+                }
+                .first-right-part-second-section {
+                    @media (max-width: 1280px) and (min-width: 670px) {
+                        width: 75%;
+                        display: flex;
+                        text-align: center;
+                        align-items: center;
+                    }
+                    @media (max-width: 669px) {
+                        display: flex;
+                        text-align: center;
+                        align-items: center;
+                    }
+                }
+                .second-right-part-second-section {
+                    @media (max-width: 930px) and (min-width: 919px) {
+                        width: 77%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    @media (max-width: 918px) and (min-width: 912px) {
+                        width: 71%;
+                    }  
+                }
+            }
+            @media (max-width: 911px) and (min-width: 830px) {
+                @include justifyCenter();
+                .first-mutual-font-size {
+                    font-size: 26px;
+                }
+            }
+            @media (max-width: 911px) and (min-width: 768px) {
+                .first-mutual-font-size {
+                    font-size: 25.5px;
+                }
+            }
+            @media (max-width: 829px) and (min-width: 776px) {
+                width: 66%;
+                @include justifyCenter();
+            }
+            @media (max-width: 767px) and (min-width: 481px) {
+                .first-mutual-font-size {
+                    font-size: 25.5px;
+                }
+            }
+            @include mobile {
+                width: 62%;
+                @include justifyCenter();
+            }
+            .first-mutual-font-size {
+                @include mobile {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+.second_of_transformation {
+    .div-of-second-section {
+        @media (max-width: 1270px) and (min-width: 768px) {
+            padding: 110px 0px;
+        }
+        @media (max-width: 767px) and (min-width: 481px) {
+            padding: 90px 0px;
+        }
+        @include mobile {
+            padding: 60px 0px;
+        }
+        @media (max-width: 1270px) {
+            @include flexBox1(center, column, nowrap, stretch);
+            width: 100%; 
+            .right-part-second-section {
+                @media (max-width: 1270px) {
+                    padding-top: 35px;
+                    width: 75%;
+                    text-align: center;
+                }
+                @media (max-width: 767px) and (min-width: 481px) {
+                    @include justifyCenter();
+                    font-size: 26px;
+                }
+    
+                @include mobile {
+                    width: 71%;
+                    @include justifyCenter();
+                    font-size: 25px;
+                }
+            }
         }
     }
 }
@@ -72,15 +473,92 @@
     }
 }
 
+.third_of_all {
+    .div-of-third-section {
+        @media (max-width: 1315px) and (min-width: 768px) {
+            padding: 110px 0px;
+        }
+        @media (max-width: 767px) and (min-width: 481px) {
+            padding: 90px 0px;
+        }
+
+        @include mobile {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        @media (max-width: 1315px) {
+            @include flexBox1(center, column, nowrap, stretch);
+            width: 100%;
+            .right-part-of-div-of-third-section {
+                @media (max-width: 1315px) {
+                    width: 75%;
+                    padding-top: 35px;
+                    text-align: center;
+                }
+                @media (max-width: 854px) and (min-width: 481px) {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 35px;
+                }
+                @include mobile {
+                    width: 70%;
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 35px;
+                }
+            }
+        }
+        
+        @media (max-width: 480px) {
+            @include flexBox1(center, column, nowrap, stretch);
+            width: 100%;
+
+            
+        }
+    }
+}
+
 .fourth_section_consulting {
     background-color: $hexColor2;
-
+    
     .div-of-fourth-section {
         @include padding1();
+        @media (max-width: 1280px) and (min-width: 768px) {
+            padding: 110px 0px;
+        }
+        @media (max-width: 767px) and (min-width: 481px) {
+            padding: 90px 0px;
+        }
+        @include mobile {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
         @include flexBox1(flex-start, row, nowrap, stretch);
-    
+        @media (max-width: 1280px) {
+        @include flexBox1(center, column, nowrap, stretch);
+            width: 100%;
+        }
+        .right-part-of-div-of-fourth-section {
+            @media (max-width: 1280px) {
+                padding-top: 35px;
+                width: 75%;
+                text-align: center;
+            }
+            @media (max-width: 767px) and (min-width: 481px) {
+                display: flex;
+                justify-content: center;
+                padding-top: 35px;
+            }
+            @include mobile {
+                width: 73%;
+                display: flex;
+                justify-content: center;
+                padding-top: 35px;
+            }
+        }
+
         .left-part-of-div-of-fourth-section {
-            color: $hexColor1;
+        color: $hexColor1;
         }
     
         .right-part-of-div-of-fourth-section {
@@ -90,9 +568,16 @@
 }
 
 .left_div_consulting {
-    @include leftDiv($color3, 27px);
+    @include leftDiv($color3, 25px);
 }
 
 .right_div_consulting {
-    width: 715px;
+    width: 820px;
+}
+
+.second-mutual-font-size {
+    font-size: 18px;
+    @include mobile {
+        font-size: 16px;
+    }
 }

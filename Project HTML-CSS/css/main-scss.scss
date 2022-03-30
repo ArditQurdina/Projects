@@ -1,3 +1,21 @@
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin Ipad {
+    @media (max-width: 1024px) and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 767px) and (min-width: 481px) {
+        @content;
+    }
+}
+
 body,
 html {
     box-sizing: border-box;
@@ -15,7 +33,7 @@ html {
 }
 
 .mutual_div {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -28,7 +46,7 @@ html {
 }
 
 .readMore_Button {
-    padding: 11px 24px;
+    padding: 12px 24px;
     text-align: center;
     border-radius: 22px;
     background: none;
@@ -39,7 +57,8 @@ html {
 .inside_of_the_button {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
+    
 }
 
 .three_divs {
@@ -49,17 +68,19 @@ html {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    width: 60%;
+    width: 75%;
     font-family: Helvetica;
+    
 
     .firstDiv {
-        font-size: 38px;
+        font-size: 31px;
+        letter-spacing: 1.2px;
         margin-bottom: 35px;
         margin: 0px;
     }
     
     .secondDiv {
-        font-size: 76px;
+        font-size: 68px;
         font-weight: 400;
     }
     
@@ -75,6 +96,9 @@ html {
     justify-content: center;
     align-items: center;
     font-family: Helvetica;
+    @include mobile {
+        height: 4.5%;
+    }
 
     .scroll_down {
         font-size: 17px;
@@ -93,15 +117,46 @@ html {
         margin: auto;
         text-align: center;
         color: white;
+        @include Ipad {
+            padding: 110px 0px;
+        }
+        @include tablet {
+            padding: 90px 0px;
+            width: 70%;
+        }
+        @include mobile {
+            padding: 60px 0px;
+        }
 
         .title-of-div-of-mutual-section {
-            font-size: 25px; 
-            letter-spacing: 2.1px;
+            font-size: 24px; 
+            letter-spacing: 2.5px;
+            @include Ipad {
+                font-size: 23.5px;
+            }
+            @include tablet {
+                font-size: 23px;
+            }
+            @include mobile {
+                letter-spacing: 2.6px;
+                font-weight: 400;
+            }
         }
 
         .text-under-the-title {
-            font-size: 40px; 
+            font-size: 28px; 
             padding-top: 65px;
+            @include Ipad {
+                font-size: 27px;
+            }
+            @include tablet {
+                font-size: 26px;
+            }
+            @include mobile {
+                font-size: 25px;
+                padding-top: 45px;
+                letter-spacing: 4px;
+            }
         }
 
         .three-rows-of-div-of-mutual-section {
@@ -110,18 +165,37 @@ html {
             border-bottom: #707070 1px solid;
             padding-bottom: 5px;
             text-align: left;
+            @include Ipad {
+                font-size: 19px;
+            }
+            @include tablet {
+                font-size: 18px;
+            }
+            @include mobile {
+                font-size: 17px;
+            }
         }
 
         .first-row-mutual-section {
             padding-top: 65px;
+            @include mobile {
+                padding-top: 45px;
+            }
         }
+        
 
         .second-and-third-row {
             padding-top: 15px;
+            @include mobile {
+                padding-top: 10px;
+            }
         }
 
         .div-of-third-button {
             padding-top: 65px;
+            @include mobile {
+                padding-top: 45px;
+            }
 
             .third_button {
                 border: 1px solid;
@@ -130,8 +204,17 @@ html {
 
                 .inside_of_the_third_button {
                     text-decoration: none;
-                    font-size: 18px;
+                    font-size: 16px;
                     color: white;
+                    @include Ipad {
+                        font-size: 15.5px;
+                    }
+                    @include tablet {
+                        font-size: 15px;
+                    }
+                    @include mobile {
+                        font-size: 14.5px;
+                    }
                 }
             }
         }
@@ -143,14 +226,31 @@ html {
 }
 
 .div-of-last-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     color: white;
+    @media (max-width: 830px) {
+        padding: 60px 0px;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .content2 {
     display: flex;
     justify-content: space-between;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    @media (max-width: 830px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 50px;
+    }
 }
 
 .icons-list {
@@ -158,10 +258,17 @@ html {
     justify-content: space-between;
     list-style-type: none;
     color: #999999;
+    @media (max-width: 830px) {
+        margin-left: -40px;
+    }
 }
 
 .lower--content {
     margin-top: 120px;
+
+    @media (max-width: 830px) {
+        margin-top: 0px;
+    }
 }
 
 .mutual--paragraph {
@@ -169,6 +276,12 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    @media (max-width: 830px) {
+        display: stretch;
+        flex-direction: stretch;
+        justify-content: stretch;
+        align-items: stretch;
+    }
 }
 
 .mutual--span {
@@ -180,11 +293,14 @@ html {
 }
 
 .mutual-font_size {
-    font-size: 20px;
+    font-size: 18px;
+    @include mobile {
+        font-size: 17px;
+    }
 }
 
 .right-paragraph_and_icons {
-    width: 270px;
+    width: 260px;
 }
 
 @mixin menu1($MenuColor) {
@@ -218,8 +334,15 @@ html {
     align-content: $alignContent;
 }
 
+@mixin justifyCenter {
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+}
+
 @import "./consulting";
 @import "./solutions";
 @import "./training";
 @import "./home-page";
 @import "./menu";
+@import "./media-queries";
