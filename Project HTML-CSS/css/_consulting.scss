@@ -355,72 +355,87 @@
         @media (max-width: 1280px) {
             @include flexBox1(center, column, nowrap, stretch);
             width: 100%;
-        @media (max-width: 930px) and (min-width: 800px) {
-            width: 80%;
-        } 
-            .right-part-of-div-of-second-section {
-                @media (max-width: 1280px) {
-                    padding-top: 35px;
-                    width: auto;
+        }
+        .right-part-of-div-of-second-section {
+            @media (max-width: 1280px) {
+                padding-top: 35px;
+                width: auto;
+                display: flex;
+                align-items: center;
+            }
+            .first-right-part-second-section {
+                @media (max-width: 1280px) and (min-width: 931px) {
+                    width: 75%;
                     display: flex;
-                    align-items: center;
+                    text-align: center;
                 }
-                .first-right-part-second-section {
-                    @media (max-width: 1280px) and (min-width: 670px) {
-                        width: 75%;
-                        display: flex;
-                        text-align: center;
-                        align-items: center;
-                    }
-                    @media (max-width: 669px) {
-                        display: flex;
-                        text-align: center;
-                        align-items: center;
-                    }
+                @media (max-width: 930px) and (min-width: 481px) {
+                    display: flex;
+                    text-align: center;
+                    width: 70%;
                 }
-                .second-right-part-second-section {
-                    @media (max-width: 930px) and (min-width: 919px) {
-                        width: 77%;
-                        display: flex;
-                        justify-content: center;
-                    }
-                    @media (max-width: 918px) and (min-width: 912px) {
-                        width: 71%;
-                    }  
-                }
-            }
-            @media (max-width: 911px) and (min-width: 830px) {
-                @include justifyCenter();
-                .first-mutual-font-size {
-                    font-size: 26px;
-                }
-            }
-            @media (max-width: 911px) and (min-width: 768px) {
-                .first-mutual-font-size {
-                    font-size: 25.5px;
-                }
-            }
-            @media (max-width: 829px) and (min-width: 776px) {
-                width: 66%;
-                @include justifyCenter();
-            }
-            @media (max-width: 767px) and (min-width: 481px) {
-                .first-mutual-font-size {
-                    font-size: 25.5px;
-                }
-            }
-            @include mobile {
-                width: 62%;
-                @include justifyCenter();
-            }
-            .first-mutual-font-size {
                 @include mobile {
-                    font-size: 25px;
+                    width: 97%;
                 }
+            }
+            .second-right-part-second-section {
+                @media (max-width: 930px) and (min-width: 795px) {
+                    width: 70%;
+                    display: flex;
+                    justify-content: center;
+                }
+                @media (max-width: 794px) and (min-width: 787px) {
+                    width: 65%;
+                }
+                @media (max-width: 786px) and (min-width: 761px) {
+                    width: 53%;
+                }
+                @media (max-width: 760px) and (min-width: 730px) {
+                    width: 57%;
+                }
+                @media (max-width: 729px) and (min-width: 670px) {
+                    width: 55%;
+                }
+                @media (max-width: 669px) and (min-width: 600px) {
+                    width: 59%;
+                }
+                @media (max-width: 599px) and (min-width: 481px) {
+                    width: 65.5%;
+                }
+                @include mobile {
+                    width: 100%;
+
+                }
+            }
+        }
+        @media (max-width: 911px) and (min-width: 830px) {
+            @include justifyCenter();
+            .first-mutual-font-size {
+                font-size: 26px;
+            }
+        }
+        @media (max-width: 829px) and (min-width: 768px) {
+            .first-mutual-font-size {
+                font-size: 25.5px;
+            }
+        }
+        @media (max-width: 767px) and (min-width: 481px) {
+            .first-mutual-font-size {
+                font-size: 25px;
+            }
+        }
+        @include mobile {
+            width: 62%;
+            @include justifyCenter();
+        }
+        .first-mutual-font-size {
+            @include mobile {
+                font-size: 25px;
             }
         }
     }
 }
+
 .second_of_transformation {
     .div-of-second-section {
         @media (max-width: 1270px) and (min-width: 768px) {
